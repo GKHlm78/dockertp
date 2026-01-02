@@ -37,7 +37,7 @@ cd RentalService
 ### 4. Lancer l'application localement
 
 ```bash
-# Être à la racine du service ./RentalService
+# Être à la racine de RentalService
 java -jar build/libs/RentalService-0.0.1-SNAPSHOT.jar
 ```
 
@@ -45,7 +45,7 @@ Checker l'application dans votre navigateur : `http://localhost:8080/bonjour`
 
 ### 5. Créer dockerfile
 
-Ecrire ceci dans un fichier dockerfile a la racine du micro service :
+Ecrire ceci dans un fichier dockerfile a la racine de RentalService :
 
 ```bash
 FROM eclipse-temurin:21
@@ -61,12 +61,12 @@ ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/urandom", "-jar", "/app.jar"]
 #### Construire l'image Docker :
 ```bash
 cd RentalService
-docker build -t rentalservice .
+docker build -t nomimagedocker .
 ```
 
 #### Lancer le conteneur :
 ```bash
-docker run -p 8080:8080 <ID IMAGE>
+docker run -p 8080:8080 nomimage
 ```
 
 L'application sera accessible sur `http://localhost:8080`
