@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  java-service:
+    build: ./RentalService
+    image: battlcall/servicejava:latest
+    ports:
+      - "8080:8080"
+
+  php-service:
+    build: ./phpservice
+    image: battlcall/servicephp:latest
+    ports:
+      - "8082:80"
