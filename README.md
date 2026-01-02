@@ -1,4 +1,4 @@
-﻿# ingnum, RentalService
+﻿# ingnum - RentalService
 
 Service de location développé avec Spring Boot et Docker.
 
