@@ -1,7 +1,8 @@
 ﻿# Projet Microservices avec Docker Compose
-Ce projet  contient deux microservices :
-RentalService : Service de location développé a partir de Spring Boot et Java
-PhpService : Service développé en PHP
+Ce projet contient deux microservices :
+
+**RentalService** : Service de location développé a partir de Spring Boot et Java
+**PhpService** : Service développé en PHP
 
 ## Prérequis
 
