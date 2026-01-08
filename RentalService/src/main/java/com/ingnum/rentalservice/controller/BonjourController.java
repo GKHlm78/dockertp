@@ -4,17 +4,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-
 @RestController
+@RequestMapping("/customer")
 public class BonjourController {
 
-        private final RestTemplate restTemplate = new RestTemplate();
+    @Value("${customer.service.url}")
+    private String customerServiceUrl;
 
+    private final RestTemplate restTemplate = new RestTemplate();
 
-    @GetMapping("/bonjour")
-    public String bonjour() {
-        String prenom = restTemplate.getForObject("http://php-service:80", String.class);
-        return "bonjour," + prenom;
+    @GetMapping("/{name}")
+    public String bonjour(@PathVariable String name) {
+        String prenom = restTemplate.getForObject(customerServiceUrl, String.class);
+        return "Bonjour " + name + " (" + prenom + ")";
     }
 }
+
 

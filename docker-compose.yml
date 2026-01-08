@@ -6,9 +6,17 @@ services:
     image: battlcall/servicejava:latest
     ports:
       - "8080:8080"
+    networks:
+      - rental-network
 
   php-service:
-    build: ./phpservice
+    build: ./phpService
     image: battlcall/servicephp:latest
     ports:
       - "8082:80"
+    networks:
+      - rental-network
+
+networks:
+  rental-network:
+    driver: bridge

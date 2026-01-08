@@ -1,6 +1,7 @@
-﻿# ingnum - RentalService
-
-Service de location développé avec Spring Boot et Docker.
+﻿# Projet Microservices avec Docker Compose
+Ce projet  contient deux microservices :
+RentalService : Service de location développé a partir de Spring Boot et Java
+PhpService : Service développé en PHP
 
 ## Prérequis
 
@@ -14,6 +15,9 @@ Service de location développé avec Spring Boot et Docker.
 ```bash
 cd chemin/vers/votre/dossier
 git clone <url-du-repo>
+git remote remove origin
+git remote add origin <url-de-votre-repo>
+
 git branch -M main
 git push -u origin main
 ```
