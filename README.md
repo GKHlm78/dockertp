@@ -1,8 +1,7 @@
-﻿# Projet Microservices avec Docker Compose
-Ce projet contient deux microservices :
+﻿# Rental Service
+Ce projet contient un service :
 
-**RentalService** : Service de location développé a partir de Spring Boot et Java
-**PhpService** : Service développé en PHP
+**RentalService** : Service de location développé a partir de Spring Boot et Java  
 
 ## Prérequis
 
@@ -66,12 +65,12 @@ ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/urandom", "-jar", "/app.jar"]
 #### Construire l'image Docker :
 ```bash
 cd RentalService
-docker build -t nomimagedocker .
+docker build -t servicejava .
 ```
 
 #### Lancer le conteneur :
 ```bash
-docker run -p 8080:8080 nomimage
+docker run -p 8080:8080 servicejava
 ```
 
 L'application sera accessible sur `http://localhost:8080`
